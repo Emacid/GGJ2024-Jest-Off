@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - CheckBox
+  - CheckBoxA
+  - CheckBoxW
+  - CheckBoxS
+  - CheckBoxD
+  - CheckBoxLeft
+  - CheckBoxUp
+  - CheckBoxDown
+  - CheckBoxRight
   layers:
   - Default
   - TransparentFX
