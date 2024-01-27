@@ -1,20 +1,23 @@
 using UnityEngine;
 
-public class PaintSurface2 : MonoBehaviour
+public class PaintSurface : MonoBehaviour
 {
-    public Color brushColor = Color.red;
-
+    public Color brushColor = Color.blue;
+    public GameObject BlueMarker;
+    
+    
     private void Start()
     {
-
+        brushColor = Color.green;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
+        if(Input.GetKeyDown(KeyCode.E)) 
+            {
             ChangeColor();
-        }
+            
+            }
 
         RaycastHit hit;
         Ray ray = new Ray(transform.position, Vector3.down);
@@ -32,20 +35,27 @@ public class PaintSurface2 : MonoBehaviour
         }
     }
 
-    private void ChangeColor()
+    private void ChangeColor() 
     {
-        if (brushColor == Color.blue)
-        {
-            brushColor = Color.red;
-        }
-        else if (brushColor == Color.red)
+        if(brushColor == Color.blue) 
         {
             brushColor = Color.green;
+            BlueMarker.transform.position += new Vector3(-426, 0, 0);
         }
-        else if (brushColor == Color.green)
+        else if(brushColor == Color.red) 
         {
             brushColor = Color.blue;
+            BlueMarker.transform.position += new Vector3(213, 0, 0);
+        }
+        else if(brushColor == Color.green) 
+        {
+            brushColor= Color.red;
+            BlueMarker.transform.position += new Vector3(213, 0, 0);
         }
     }
+
+   
+        
+        
 
 }
