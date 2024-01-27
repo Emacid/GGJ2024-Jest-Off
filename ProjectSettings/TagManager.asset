@@ -13,6 +13,10 @@ TagManager:
   - CheckBoxUp
   - CheckBoxDown
   - CheckBoxRight
+  - TouchPointLL
+  - TouchPointLR
+  - TouchPointRU
+  - TouchPointLU
   layers:
   - Default
   - TransparentFX
