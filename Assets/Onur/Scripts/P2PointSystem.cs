@@ -36,7 +36,7 @@ public class P2PointSystem : MonoBehaviour
         {
             Debug.Log("YOU GOT Left Arrow!");
             insideLeftArrow = false;
-            //pointsP1.pointP1 += 10;
+            pointsP2.pointP2 += 10;
             redVfx.gameObject.SetActive(true);
         }
 
@@ -44,7 +44,7 @@ public class P2PointSystem : MonoBehaviour
         {
             Debug.Log("YOU GOT Up Arrow!");
             insideUpArrow = false;
-            //pointsP1.pointP1 += 10;
+            pointsP2.pointP2 += 10;
             blueVfx.gameObject.SetActive(true);
         }
 
@@ -52,7 +52,7 @@ public class P2PointSystem : MonoBehaviour
         {
             Debug.Log("YOU GOT Down Arrow!");
             insideDownArrow = false;
-            //pointsP1.pointP1 += 10;
+            pointsP2.pointP2 += 10;
             purpleVfx.gameObject.SetActive(true);
         }
 
@@ -60,7 +60,7 @@ public class P2PointSystem : MonoBehaviour
         {
             Debug.Log("YOU GOT Right Arrow!");
             insideRightArrow = false;
-            //pointsP1.pointP1 += 10;
+            pointsP2.pointP2 += 10;
             greenVfx.gameObject.SetActive(true);
         }
     }

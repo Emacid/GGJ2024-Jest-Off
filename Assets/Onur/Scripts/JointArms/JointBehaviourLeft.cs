@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JointBehaviourLeft : MonoBehaviour
 {
-    public GameObject jointArmLeft;
+    //public GameObject jointArmLeft;
 
     void Start()
     {

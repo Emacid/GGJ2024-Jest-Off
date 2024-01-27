@@ -25,6 +25,6 @@ public class PointsP2 : MonoBehaviour
     void UpdatePointText()
     {
         // TextMeshPro nesnesinin text deðerini pointP1'in deðeriyle güncelle
-        pointP1Text.text = "P2 Points: " + pointP2.ToString();
+        pointP1Text.text = pointP2.ToString();
     }
 }
