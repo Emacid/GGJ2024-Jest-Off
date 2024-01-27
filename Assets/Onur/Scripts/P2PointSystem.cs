@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class P1PointSystem : MonoBehaviour
+public class P2PointSystem : MonoBehaviour
 {
 
     public bool insideLeftArrow;
     public bool insideUpArrow;
     public bool insideDownArrow;
     public bool insideRightArrow;
-    public PointsP1 pointsP1;
+    public PointsP2 pointsP2;
+
 
     public GameObject redVfx;
     public GameObject greenVfx;
@@ -29,89 +30,89 @@ public class P1PointSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
 
-        if (Input.GetKeyDown(KeyCode.A) && insideLeftArrow)
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && insideLeftArrow)
         {
-            Debug.Log("YOU GOT A!");
+            Debug.Log("YOU GOT Left Arrow!");
             insideLeftArrow = false;
-            pointsP1.pointP1 += 10;
+            //pointsP1.pointP1 += 10;
             redVfx.gameObject.SetActive(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && insideUpArrow)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && insideUpArrow)
         {
-            Debug.Log("YOU GOT W!");
+            Debug.Log("YOU GOT Up Arrow!");
             insideUpArrow = false;
-            pointsP1.pointP1 += 10;
+            //pointsP1.pointP1 += 10;
             blueVfx.gameObject.SetActive(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && insideDownArrow)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && insideDownArrow)
         {
-            Debug.Log("YOU GOT S!");
+            Debug.Log("YOU GOT Down Arrow!");
             insideDownArrow = false;
-            pointsP1.pointP1 += 10;
+            //pointsP1.pointP1 += 10;
             purpleVfx.gameObject.SetActive(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && insideRightArrow)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && insideRightArrow)
         {
-            Debug.Log("YOU GOT D!");
+            Debug.Log("YOU GOT Right Arrow!");
             insideRightArrow = false;
-            pointsP1.pointP1 += 10;
+            //pointsP1.pointP1 += 10;
             greenVfx.gameObject.SetActive(true);
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("CheckBoxA"))
+        if (other.CompareTag("CheckBoxLeft"))
         {
-            Debug.Log("Inside A zone");
+            Debug.Log("Inside Left zone");
             insideLeftArrow = true;
 
         }
 
-        else if (other.CompareTag("CheckBoxW")) 
+        else if (other.CompareTag("CheckBoxUp"))
         {
-            Debug.Log("Inside W zone");
+            Debug.Log("Inside Up zone");
             insideUpArrow = true;
         }
-        
-        else if (other.CompareTag("CheckBoxS"))
+
+        else if (other.CompareTag("CheckBoxDown"))
         {
-            Debug.Log("Inside S zone");
+            Debug.Log("Inside Down zone");
             insideDownArrow = true;
         }
 
-        else if (other.CompareTag("CheckBoxD"))
+        else if (other.CompareTag("CheckBoxRight"))
         {
-            Debug.Log("Inside D zone");
+            Debug.Log("Inside Right zone");
             insideRightArrow = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("CheckBoxA"))
+        if (other.CompareTag("CheckBoxLeft"))
         {
-            Debug.Log("exited A zone");
+            Debug.Log("exited Left zone");
             insideLeftArrow = false;
         }
-        else if (other.CompareTag("CheckBoxW")) 
+        else if (other.CompareTag("CheckBoxUp"))
         {
-            Debug.Log("exited W zone");
+            Debug.Log("exited Up zone");
             insideUpArrow = false;
         }
-        else if (other.CompareTag("CheckBoxS"))
+        else if (other.CompareTag("CheckBoxDown"))
         {
-            Debug.Log("exited S zone");
+            Debug.Log("exited Down zone");
             insideDownArrow = false;
         }
-        else if (other.CompareTag("CheckBoxD"))
+        else if (other.CompareTag("CheckBoxRight"))
         {
-            Debug.Log("exited D zone");
+            Debug.Log("exited Right zone");
             insideRightArrow = false;
         }
 
