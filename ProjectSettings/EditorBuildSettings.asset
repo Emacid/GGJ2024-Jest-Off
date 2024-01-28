@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Onur/DanceScene.unity
     guid: 30651eb6cf1e8e84189601b19db33415
+  - enabled: 1
+    path: Assets/Onur/Credits.unity
+    guid: 33a2eb6e2818b0041adef630638cab8b
   m_configObjects: {}
