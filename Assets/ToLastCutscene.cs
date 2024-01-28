@@ -8,7 +8,7 @@ public class ToLastCutscene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(CloseTheSceneDude());
     }
 
     // Update is called once per frame
@@ -19,9 +19,9 @@ public class ToLastCutscene : MonoBehaviour
 
     IEnumerator CloseTheSceneDude()
     {
-        yield return new WaitForSeconds(63f);
+        yield return new WaitForSeconds(66f);
 
-        SceneManager.LoadScene("PaintingScene");
+        SceneManager.LoadScene("ThirdCutscene");
     }
 
 }

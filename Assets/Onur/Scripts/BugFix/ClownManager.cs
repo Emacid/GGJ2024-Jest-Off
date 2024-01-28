@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClownManager : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class ClownManager : MonoBehaviour
     IEnumerator ChangeSceneBro() 
     {
         yield return new WaitForSeconds(3);
-        Debug.Log("sahne desgis");
+        SceneManager.LoadScene("SecondCutsene");
     }
 
 }
