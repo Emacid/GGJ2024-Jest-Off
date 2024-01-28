@@ -12,6 +12,8 @@ public class ClownManager : MonoBehaviour
     public GameObject winSFX;
     public GameObject splendidText;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,12 @@ public class ClownManager : MonoBehaviour
             winSFX.SetActive(true);
             splendidText.SetActive(true);
             Debug.Log("WIN!!!");
+            
         }
 
+        if(Input.GetKeyUp(KeyCode.N)) 
+        {
+            animator.SetBool("CloseTheScene", true);
+        }
     }
 }

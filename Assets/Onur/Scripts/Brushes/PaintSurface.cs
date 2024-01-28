@@ -4,11 +4,15 @@ public class PaintSurface : MonoBehaviour
 {
     public Color brushColor = Color.blue;
     public GameObject BlueMarker;
-    
-    
+
+    public Color GreyishColor = new Color(57, 57, 57);
+    public Color WhiteColor = Color.white;
+    public Color OrangeColor = new Color(255, 170, 1);
+
+
     private void Start()
     {
-        brushColor = Color.green;
+        brushColor = WhiteColor;
     }
 
     private void Update()
@@ -37,19 +41,19 @@ public class PaintSurface : MonoBehaviour
 
     private void ChangeColor() 
     {
-        if(brushColor == Color.blue) 
+        if(brushColor == OrangeColor) 
         {
-            brushColor = Color.green;
+            brushColor = Color.white;
             BlueMarker.transform.position += new Vector3(-426, 0, 0);
         }
-        else if(brushColor == Color.red) 
+        else if(brushColor == GreyishColor) 
         {
-            brushColor = Color.blue;
+            brushColor = OrangeColor;
             BlueMarker.transform.position += new Vector3(213, 0, 0);
         }
-        else if(brushColor == Color.green) 
+        else if(brushColor == Color.white) 
         {
-            brushColor= Color.red;
+            brushColor = GreyishColor;
             BlueMarker.transform.position += new Vector3(213, 0, 0);
         }
     }

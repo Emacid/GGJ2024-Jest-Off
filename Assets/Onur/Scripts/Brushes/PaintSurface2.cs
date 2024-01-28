@@ -5,10 +5,13 @@ public class PaintSurface2 : MonoBehaviour
     public Color brushColor = Color.blue;
     public GameObject RedMarker;
 
+    public Color GreyishColor = new Color(57, 57, 57);
+    public Color WhiteColor = Color.white;
+    public Color OrangeColor = new Color(255, 170, 1);
 
     private void Start()
     {
-        brushColor = Color.green;
+        brushColor = WhiteColor;
     }
 
     private void Update()
@@ -34,22 +37,22 @@ public class PaintSurface2 : MonoBehaviour
         }
     }
 
-    private void ChangeColor()
+private void ChangeColor()
+{
+    if (brushColor == OrangeColor)
     {
-        if (brushColor == Color.blue)
-        {
-            brushColor = Color.green;
-            RedMarker.transform.position += new Vector3(-426, 0, 0);
-        }
-        else if (brushColor == Color.red)
-        {
-            brushColor = Color.blue;
-            RedMarker.transform.position += new Vector3(213, 0, 0);
-        }
-        else if (brushColor == Color.green)
-        {
-            brushColor = Color.red;
-            RedMarker.transform.position += new Vector3(213, 0, 0);
-        }
+        brushColor = Color.white;
+        RedMarker.transform.position += new Vector3(-426, 0, 0);
     }
+    else if (brushColor == GreyishColor)
+    {
+        brushColor = OrangeColor;
+        RedMarker.transform.position += new Vector3(213, 0, 0);
+    }
+    else if (brushColor == Color.white)
+    {
+        brushColor = GreyishColor;
+        RedMarker.transform.position += new Vector3(213, 0, 0);
+    }
+   }
 }
