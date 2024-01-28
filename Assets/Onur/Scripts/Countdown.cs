@@ -5,7 +5,7 @@ using System.Collections;
 public class Countdown : MonoBehaviour
 {
     public TextMeshProUGUI countdownText;
-    private float countdownTime = 6f;
+    private float countdownTime = 60f;
     public Animator animator;
 
     void Start()
