@@ -17,6 +17,7 @@ TagManager:
   - TouchPointLR
   - TouchPointRU
   - TouchPointLU
+  - EndPoint
   layers:
   - Default
   - TransparentFX

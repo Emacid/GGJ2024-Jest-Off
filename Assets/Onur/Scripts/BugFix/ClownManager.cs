@@ -33,12 +33,24 @@ public class ClownManager : MonoBehaviour
             winSFX.SetActive(true);
             splendidText.SetActive(true);
             Debug.Log("WIN!!!");
+            StartCoroutine(finishSceneBro());
             
         }
 
-        if(Input.GetKeyUp(KeyCode.N)) 
-        {
-            animator.SetBool("CloseTheScene", true);
-        }
+        
     }
+
+    IEnumerator finishSceneBro() 
+    {
+        yield return new WaitForSeconds(3);
+        animator.SetBool("CloseTheScene", true);
+        StartCoroutine(ChangeSceneBro());
+    }
+
+    IEnumerator ChangeSceneBro() 
+    {
+        yield return new WaitForSeconds(3);
+        Debug.Log("sahne desgis");
+    }
+
 }
