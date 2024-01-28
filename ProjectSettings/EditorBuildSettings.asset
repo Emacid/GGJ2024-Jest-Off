@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Onur/OnurScene.unity
     guid: 66dc3eb30719f8e4690fdd1ca04b7e4e
+  - enabled: 1
+    path: Assets/Onur/SecondCutsene.unity
+    guid: 400a8d2b048c8294f8df8b4c2edae3b4
+  - enabled: 1
+    path: Assets/Onur/PaintingScene.unity
+    guid: 4ab84682496346643bcf720c98a0cdd0
+  - enabled: 1
+    path: Assets/Onur/ThirdCutscene.unity
+    guid: 4a048dcd26d8fc6449ac97040c546e4e
+  - enabled: 1
+    path: Assets/Onur/DanceScene.unity
+    guid: 30651eb6cf1e8e84189601b19db33415
   m_configObjects: {}
